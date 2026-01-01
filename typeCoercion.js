@@ -33,11 +33,11 @@ function coerceType(value, targetType){
     //string
     if (targetType === "string") {
         if (value === null || value === undefined) return null;
-        return String(value);
+        return String(value).trim();
     }
 
     return null
 }
 
-let vat;
+let vat = "   trim";
 console.log(coerceType( vat, "string"));
